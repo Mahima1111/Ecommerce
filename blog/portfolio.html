@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Mahima Vijayan</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="./asin-1.webp" id="cat" alt="Centered Image" class="center-img" width="350" />
+      <h3>Hello! I'm Mahima, a passionate web developer and software tester.</h3>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill"><span>HTML</span><div class="span html"></div></div>
+        <div class="skill"><span>CSS</span><div class="span css"></div></div>
+        <div class="skill"><span>JavaScript</span><div class="span js"></div></div>
+        <div class="skill"><span>Manual Testing</span><div class="span testing"></div></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <img src="./voting app.png" alt="Project 1">
+          <h3>1. Voting System</h3>
+          <p>A responsive voting application demo.</p>
+        </div>
+        <div class="card">
+          <img src="/blog-img.png" alt="Project 2">
+          <h3>2. Blog Website</h3>
+          <p>A blog built with HTML and CSS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="mailto:mahima224@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="./Facebook_Logo.png" alt="Facebook" width="40" /></a>
+      <a href="https://instagram.com"><img src="./Instagram_icon.png1.png" alt="Instagram" width="40" /></a>
+      <a href="https://twitter.com"><img src="./twitter-x-icon.png" alt="Twitter" width="40" /></a>
+    </div>
+    <p>&copy; 2025 Mahima Vijayan</p>
+  </footer>
+</body>
+</html>

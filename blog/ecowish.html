@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="ecom.css" />
+  <link rel="stylesheet" href="echome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1>MyWishlist</h1>
+    <div class="icons">
+      <div class="icon">
+        <i class="fas fa-heart"></i> <span id="wishlist-count">0</span>
+      </div>
+      <div class="icon">
+        <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <div id="wishlist-items"></div>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    document.getElementById("wishlist-count").textContent = wishlist.length;
+    document.getElementById("cart-count").textContent = cart.length;
+
+    const container = document.getElementById('wishlist-items');
+    container.innerHTML = '';
+
+    if (wishlist.length === 0) {
+      container.innerHTML = "<p style='padding:20px;'>Your wishlist is empty.</p>";
+    } else {
+      wishlist.forEach((item, index) => {
+        const discount = Math.round(((item.mrp - item.price) / item.mrp) * 100);
+        container.innerHTML += `
+          <div class="wishlist-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="wishlist-info">
+              <h3>${item.name}</h3>
+              <p>
+                <span class="price">₹${item.price}</span>
+                <span class="mrp">₹${item.mrp}</span>
+                <span class="discount">${discount}% off</span>
+              </p>
+              <button onclick="moveToCart(${index})">Move to Cart</button>
+            </div>
+            <i class="fas fa-trash remove-btn" onclick="removeItem(${index})"></i>
+          </div>
+        `;
+      });
+    }
+
+    function removeItem(index) {
+      wishlist.splice(index, 1);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      showToast("X Removed from Wishlist");
+      setTimeout(() => location.reload(), 800);
+    }
+
+    function moveToCart(index) {
+      const item = wishlist.splice(index, 1)[0];
+      cart.push(item);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      localStorage.setItem("cart", JSON.stringify(cart));
+      showToast("🛒 Moved to Cart");
+      setTimeout(() => location.reload(), 800);
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2000);
+    }
+  </script>
+  <script src="js/ecom.js"></script>
+
+</body>
+</html>

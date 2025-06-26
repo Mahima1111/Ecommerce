@@ -1,0 +1,110 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+header {
+  background-color: #b1b4d0;
+  color: white;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+header h2 {
+  margin-bottom: 20px;
+  color: #060505;
+}
+
+.author {
+  font-size: 14px;
+  color: #060505;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #24199b;
+  text-align: center;
+
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #b1b4d0;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  header h2, h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}

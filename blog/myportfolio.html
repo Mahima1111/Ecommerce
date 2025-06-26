@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" href="myportfolio.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased leading-normal">
+  
+  <header class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white p-4 shadow-lg sticky top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold rounded-lg p-2 hover:bg-white hover:text-indigo-600 transition duration-300">
+        Mahima Vijayan
+      </a>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-purple-200 text-lg font-medium transition duration-300">About</a></li>
+        <li><a href="#skills" class="hover:text-purple-200 text-lg font-medium transition duration-300">Skills</a></li>
+        <li><a href="#projects" class="hover:text-purple-200 text-lg font-medium transition duration-300">Projects</a></li>
+        <li><a href="#contact" class="hover:text-purple-200 text-lg font-medium transition duration-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white py-20 md:py-32 flex items-center justify-center min-h-[calc(100vh-80px)] hero-section">
+    <div class="container mx-auto text-center px-4">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">
+        Hi, I'm <span class="text-yellow-300"> Mahima Vijayan</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 leading-relaxed animate-fade-in-up">
+        A passionate <span class="font-semibold">Web Developer</span> specializing in building engaging and user-friendly web experiences.
+      </p>
+      <a href="#projects" class="bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:bg-indigo-100 hover:scale-105 transition duration-300 transform inline-block">
+        View My Work
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="section-heading">About Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="text-lg leading-relaxed space-y-4">
+          <p>Hello! I'm <span class="font-semibold"> Mahima Vijayan</span>, a dedicated web developer with a strong passion for creating dynamic and responsive websites.</p>
+          <p>My journey into web development began with a fascination for how interactive experiences are built online.</p>
+          <p>When I'm not coding, you can find me <span class="font-semibold">Reading</span>. Let's build something amazing together!</p>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <img src="./asin-1.webp" alt="Your Photo" class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl object-cover border-4 border-indigo-300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 md:py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-heading">My Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Repeat skill card format -->
+        <div class="skill-card">
+          <img src="./html-icon.png" alt="HTML Icon">
+          <h3>HTML5</h3>
+          <p>Semantic Structure</p>
+        </div>
+        <div class="skill-card">
+          <img src="./css-icon.png" alt="CSS Icon">
+          <h3>CSS3</h3>
+          <p>Styling & Responsiveness</p>
+        </div>
+        <div class="skill-card">
+          <img src="./javascript-icon.jpg" alt="JavaScript Icon">
+          <h3>JavaScript</h3>
+          <p>Dynamic Interactions</p>
+        </div>
+        <div class="skill-card">
+          <img src="./react-icon.png" alt="React Icon">
+          <h3>React.js</h3>
+          <p>Component-Based UI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="section-heading">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Cards Here -->
+        <div class="project-card">
+          <img src="./Online-Voting-System.jpg" alt="Project 1">
+          <div class="p-6 flex flex-col flex-grow">
+           <b><h3>Voting System</h3></b>
+            <p>We will create a pollster (voting system) web application using Django. This application will conduct a series of questions along with many choices. A user will be allowed to vote for that question by selecting a choice. Based on the answer the total votes will be calculated and it will be displayed to the user. Users can also check the result of the total votes for specific questions on the website directly. We will also build the admin part of this project. Admin user will be allowed to add questions and manage questions in the application.</p>
+            <div class="project-links">
+              <a href="#">View Live →</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- More project cards -->
+         <div class="project-card">
+          <img src="/blog-img.png" alt="Project 2">
+          <div class="p-6 flex flex-col flex-grow">
+           <b><h3>Blog Website</h3></b>
+            <p>The user can Create and Delete a post which will be displayed on the home page. The create Post modal has 3 input fields that are "Title", "Category" and "Description" of the Blog post with a Responsive Design. </p>
+            <div class="project-links">
+              <a href="#">View Live →</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 md:py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-heading">Contact Us</h2>
+      <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+        <form action="#" method="POST" class="space-y-6">
+          <input type="text" name="name" placeholder="Your Name" required class="input-style" />
+          <input type="email" name="email" placeholder="Your Email" required class="input-style" />
+          <textarea name="message" rows="5" placeholder="Your Message" required class="input-style"></textarea>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 text-center">
+    <center>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="./Facebook_Logo.png" alt="Facebook" width="40" /></a>
+      <a href="https://instagram.com"><img src="./Instagram_icon.png1.png" alt="Instagram" width="40" /></a>
+      <a href="https://twitter.com"><img src="./twitter-x-icon.png" alt="Twitter" width="40" /></a>
+    </div>
+    </center>
+    <p>&copy; 2025 Mahima Vijayan. All rights reserved.</p>
+  </footer>
+</body>
+</html>

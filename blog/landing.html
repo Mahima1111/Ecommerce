@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+        <img src="./myntralogo.png" alt="Myntra" class="logo-img">
+        <span>Myntra</span>
+    </div>
+    <nav id="nav-links"></nav>
+    <!-- <a href="https://www.myntra.com/contactus" target="_blank" class="cta"><b>Contact</b></a> -->
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Biggest Fashion Sale</h1>
+      <p id="hero-desc">Get up to 70% off on top brands. Fashion that defines you.</p>
+      <div class="hero-buttons">
+        <button onclick="toggleHeroText()" class="btn" id="learnMoreBtn">Learn more</button>
+        <button onclick="goToMyntra()" href="https://www.myntra.com/login" class="btn secondary">Get Start</a>
+      </div>
+    </div>
+    <div class="hero-image">
+        <marquee> 
+      <img src="./westernwear.png" alt="Fashion Banner">
+      </marquee>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Products</h2>
+    <div class="album-slider-wrapper">
+      <button class="slide-btn left">&#10094;</button>
+
+      <div class="album-slider" id="albumSlider">
+        <div class="album-card">
+          <img src="./shirts.webp" alt="mens fashion dress" class="album-image">
+          <div class="album-details">
+            <a class="content" href="#" target="_blank">50% off on Trending In Mens Wear</a>
+          </div>
+        </div>
+
+        <div class="album-card">
+          <img src="./girldress.jpg" alt="womens fashion dress" class="album-image">
+          <div class="album-details">
+            <a class="content" href="#" target="_blank">Biggest Deals On Top Brands</a>
+          </div>
+        </div>
+
+        <div class="album-card">
+          <img src="./kids-fashion.webp" alt="kids fashion" class="album-image">
+          <div class="album-details">
+            <a class="content" href="#" target="_blank">The Kids Space</a>
+          </div>
+        </div>
+
+        <div class="album-card">
+          <img src="./furnit.webp" alt="home decor" class="album-image">
+          <div class="album-details">
+            <a class="content" href="#" target="_blank">Trends To Take Home</a>
+          </div>
+        </div>
+
+        <div class="album-card">
+          <img src="./luxurybeauty.webp" alt="beauty products" class="album-image">
+          <div class="album-details">
+            <a class="content" href="#" target="_blank">UpTo 80% off</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="slide-btn right">&#10095;</button>
+
+      <div class="explore-wrapper">
+        <a href="https://www.myntra.com" class="btn secondary">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h2>Follow Us</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/myntra/" target="_blank"><img src="./Facebook_Logo.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/myntra/" target="_blank"><img src="./Instagram_icon.png1.png" alt="Instagram"></a>
+      <a href="https://x.com/myntra" target="_blank"><img src="./twitter-x-icon.png" alt="Twitter"></a>
+    </div>
+    <p>&copy; 2025 Myntra</p>
+  </footer>
+
+  <script src="landing.js"></script>
+</body>
+</html>

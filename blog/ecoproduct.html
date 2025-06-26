@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Page</title>
+  <link rel="stylesheet" href="ecom.css" />
+  <link rel="stylesheet" href="echome.css" />
+</head>
+<body>
+      <header class="navbar">
+    <h1>Products</h1>
+    <nav class="nav-links">
+      <a href="ecowish.html">❤️Wishlist</a>
+      <a href="ecocart.html">🛒Cart</a>
+    </nav>
+  </header>
+
+<section class="products">
+    
+  <div class="product-card">
+    <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
+    <a href="ecview1.html"> 
+    <img src="./blackshirtmen.jpg"/>
+    <h3 id="product-name">TOPLOT Shirt</h3>
+    <p id="product-description">High-quality men's Casual Stylish Fashion shirt.</p>
+   <span class="price">₹599</span>
+   <span class="mrp">₹1,999</span>
+  <span class="discount">86% off</span>
+      <button onclick="addToCart('TOPLOT Shirt', 599, this)">Add to Cart</button>
+      <div id="toast" class="toast">Added to Cart</div>
+    </div>
+    </a>
+
+     
+    <div class="product-card">
+    <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
+    <a href="ecoview.html" class="product-link"> 
+    <img src="./modernss.jpg"/>
+    <h3 id="product-name">Trijal Fab Top </h3>
+    <p id="product-description">High-quality Dyed Georgette Women’s Events.</p>
+  <span class="price">₹399</span>
+  <span class="mrp">₹1,299</span>
+  <span class="discount">75% off</span>
+      <button onclick="addToCart('Trijal Fab Top', 399, this)">Add to Cart</button>
+      <div id="toast" class="toast">Added to Cart</div>
+    </div>
+    </a>
+   
+    
+    <div class="product-card">
+    <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
+     <a href="ecview2.html" class="product-link">  
+    <img src="./babygirlssssss.webp"/>
+    <h3 id="product-name">Kids Wear</h3>
+    <p id="product-description">High-quality kids fashion dress for stylish.</p>
+    <span class="price">₹499</span>
+    <span class="mrp">₹1,799</span>
+    <span class="discount">56% off</span>
+      <button onclick="addToCart('Kids Gown', 499, this)">Add to Cart</button>
+      <div id="toast" class="toast">Added to Cart</div>
+    </div>
+  </a>
+    
+    
+    <div class="product-card">
+    <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
+     <a href="ecview3.html" class="product-link"> 
+    <img src="./mnswear.webp"/>
+    <h3 id="product-name">Lymio Shirt</h3>
+    <p id="product-description">High-quality Casual Regular Fit Shirt for Men.</p>
+     <span class="price">₹699</span>
+     <span class="mrp">₹1,999</span>
+      <span class="discount">76% off</span>
+      <button onclick="addToCart('Lymio Shirt', 699, this)">Add to Cart</button>
+      <div id="toast" class="toast">Added to Cart</div>
+    </div>
+   </a>
+
+    
+    <div class="product-card">
+    <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
+    <a href="ecview4.html" class="product-link"> 
+    <img src="./frockwear.jpg"/>
+    <h3 id="product-name">Fashion Top</h3>
+    <p id="product-description">High-quality fashion dress for womens.</p>
+   <span class="price">₹999</span>
+   <span class="mrp">₹2,999</span>
+  <span class="discount">83% off</span>
+      <button onclick="addToCart('Fashion Topt', 999, this)">Add to Cart</button>
+      <div id="toast" class="toast">Added to Cart</div>
+    </div>
+  </a>
+
+</section>
+  <script src="ecom.js"></script>
+</body>
+</html>

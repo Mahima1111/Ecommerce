@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart</title>
+  <link rel="stylesheet" href="ecom.css" />
+  <link rel="stylesheet" href="echome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Your Cart</h1>
+  </header>
+
+  <a href="echome.html">← Back to Home</a>
+
+  <section class="products">
+    <div id="cart-items" class="horizontal-scroll"></div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const container = document.getElementById('cart-items');
+    const toast = document.getElementById('toast');
+    container.innerHTML = '';
+
+    if (cart.length === 0) {
+      container.innerHTML = "<p style='padding: 20px;'>Your cart is empty.</p>";
+    } else {
+      cart.forEach((item, index) => {
+        container.innerHTML += `
+          <div class="product-card">
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>₹${item.price}</p>
+            <button onclick="removeItem(${index})">Remove</button>
+          </div>
+        `;
+      });
+    }
+
+    function removeItem(index) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      showToast("X Removed from Cart");
+      setTimeout(() => location.reload(), 800);
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2000);
+    }
+  </script>
+
+  <script src="js/ecom.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyShop - Home</title>
+  <link rel="stylesheet" href="ecom.css" />
+  <link rel="stylesheet" href="echome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🛍️ EKart</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+   <ul class="nav-links">
+    <li><a href="echome.html">Home</a></li>
+    <li><a href="ecoproduct.html">Products</a></li>
+    <li><a href="ecom.html">Logout</a></li>
+  
+  <div class="icons">
+    <div class="icon" onclick="window.location.href='ecowish.html'">
+      <i class="fas fa-heart"></i>
+      <span id="wishlist-count" class="badge">0</span>
+    </div>
+    <div class="icon" onclick="window.location.href='ecocart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count" class="badge">0</span>
+    </div>
+  </div>
+  </ul>
+<!-- </nav> -->
+  </header>
+
+ <header class="main-header">
+  <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+
+  <div class="search-container">
+    <input type="text" placeholder="Search products..." onkeyup="searchproducts()" />
+    <button class="search-icon"><i class="fas fa-search"></i></button>
+  </div>
+</header>
+
+  <section class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('./shooppu.jpg');">
+      <div class="hero-content">
+        <h1>GET STARTED<br>YOUR FAVORITE SHOPPING</h1>
+        <button class="btn-buy">BUY NOW</button>
+      </div>
+    </div>
+
+    <div class="hero-slide" style="background-image: url('./shoppyyss.jfif');">
+      <div class="hero-content">
+        <h1>DISCOVER<br>EXCLUSIVE STYLES</h1>
+        <button class="btn-buy">SHOP NOW</button>
+      </div>
+    </div>
+
+    <div class="hero-slide" style="background-image: url('./shopyy.jpg');">
+      <div class="hero-content">
+        <h1>HOT DEALS<br>FOR YOU</h1>
+        <button class="btn-buy">EXPLORE</button>
+      </div>
+    </div>
+
+    <div class="hero-arrow left" onclick="prevSlide()">&#10094;</div>
+    <div class="hero-arrow right" onclick="nextSlide()">&#10095;</div>
+  </section>
+
+  <section class="products">
+    <a href="ecoproduct.html" class="product-link">
+    <div class="product-card">
+      <img src="./mensss.png" alt="Men Fashion">
+      <h3>Men’s Fashion</h3>
+      <p>Trendy outfits for all seasons.</p>
+      <span class="price">65% off on all</span>
+    </div>
+
+   
+    <a href="ecoproduct.html" class="product-link">
+    <div class="product-card">
+      <img src="./girldress.jpg" alt="Women Fashion">
+      <h3>Women’s Fashion</h3>
+      <p>Chic and elegant styles.</p>
+      <span class="price">50% offer</span>
+    </div>
+
+   <a href="ecoproduct.html?product=baby-fashion" class="product-link">
+    <div class="product-card">
+      <img src="./kidsssss.avif" alt="Baby Fashion">
+      <h3>Baby Fashion</h3>
+      <p>Cute & cozy clothing for babies.</p>
+      <span class="price">80% offer sale</span>
+    </div>
+
+    <a href="ecoproduct.html?product=mens-fashion" class="product-link">
+      <div class="product-card">
+      <img src="./mensss.png" alt="Men Fashion">
+      <h3>Men’s Fashion</h3>
+      <p>Trendy outfits for all seasons.</p>
+      <span class="price">75% offer sale</span>
+    </div>
+
+    <a href="ecoproduct.html" class="product-link">
+    <div class="product-card">
+      <img src="./girldress.jpg" alt="Women Fashion">
+      <h3>Women’s Fashion</h3>
+      <p>Chic and elegant styles.</p>
+      <span class="price">60% off on all brands</span>
+    </div>
+
+    <div class="explore-wrapper">
+      <a href="ecoproduct.html" class="btn secondary">Explore</a>
+    </div>
+
+  </section>
+  
+  <footer>
+    <p>© 2025 MyShop. All rights reserved.</p>
+  </footer>
+
+  <script src="ecom.js"></script>
+
+</body>
+</html>
+
+

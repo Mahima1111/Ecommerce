@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+header {
+  background-color: #ff5722;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.nav-toggle-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+}
+
+.nav-toggle-label span {
+  background: white;
+  height: 3px;
+  width: 100%;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav menu hidden by default */
+nav.nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #ff784b;
+}
+
+nav.nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+nav.nav ul li a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav.nav ul li a:hover {
+  background: #e5481e;
+}
+
+/* Toggle menu when checkbox is checked */
+.nav-toggle:checked ~ .nav {
+  max-height: 300px; /* enough height to show menu items */
+}
+
+/* Animate hamburger into 'X' */
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === Search and Sort Controls === */
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-sort-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+#searchInput,
+#sortMenu {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #cc4949;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* === Menu Section === */
+.section-center {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 1rem 0;
+}
+
+.menu-item {
+  background: #f7f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.menu-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 1rem;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: #181615;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* === About Section === */
+.about {
+  background: #e25839;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+
+/* === Contact Section === */
+.contact-us {
+  background: #eb722c;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #ff7f50;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.social-icons {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  nav.nav {
+    max-height: none;
+  }
+
+  nav.nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav.nav ul li a {
+    padding: 1rem 2rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .menu-item {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .menu-img {
+    height: 160px;
+  }
+
+  .menu-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price {
+    margin-top: 0.25rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+  }
+
+  .search-sort-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchInput,
+  #sortMenu {
+    max-width: 100%;
+  }
+}

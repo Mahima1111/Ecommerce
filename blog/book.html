@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyBooks - Personal Library</title>
+  <link rel="stylesheet" href="book.css" />
+</head>
+<body>
+
+  <header>
+    <h1>📚 MyBooks</h1>
+    <nav>
+      <!-- <a href="#" onclick="showSection('home')">Home</a> -->
+      <a href="#" onclick="showSection('books')">Home</a>
+      <a href="#" onclick="showSection('add')">Add Book</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section
+  <section id="home" class="active">
+    <h2>Welcome to MyBooks</h2>
+    <p>Manage and explore your personal library.</p>
+    <h3>📖 Featured Book</h3>
+    <div class="book-card">
+      <h4>The Alchemist</h4>
+      <p>by Paulo Coelho</p>
+      <p><strong>Genre:</strong> Fiction</p>
+      <p><strong>Rating:</strong> ⭐⭐⭐⭐☆</p>
+    </div>
+  </section> -->
+
+  <!-- My Books Section -->
+  <section id="books">
+    <h2>Book Collection</h2>
+    <input type="text" id="searchInput" placeholder="Search by title..." />
+    <select id="genreFilter">
+      <option value="">All Genres</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Science">Science</option>
+    </select>
+    <div id="bookList"></div>
+  </section>
+
+  <!-- Add Book Section -->
+  <section id="add">
+    <h2>Add a New Book</h2>
+    <form id="addBookForm">
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="text" id="author" placeholder="Author" required />
+      <input type="text" id="genre" placeholder="Genre" required />
+      <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required />
+      <button type="submit">Add Book</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script src="book.js"></script>
+</body>
+</html>

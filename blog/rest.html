@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="rest.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Our Menu</h1>
+    <div class="container">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span> <span></span> <span></span>
+      </label>
+      <nav class="nav" id="navMenu"> 
+        <ul>
+          <li><a href="#" data-category="items">Items</a></li>
+          <li><a href="#" data-category="about">About</a></li>
+          <li><a href="#" data-category="contact">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="controls">
+    <div class="search-sort-container">
+      <input type="text" id="searchInput" placeholder="Search menu..." />
+      <select id="sortMenu">
+        <option value="all">Sort by</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+      </select>
+    </div>
+  </section>
+
+  <main class="section-center" id="menu-container">
+    <!-- Menu items will be inserted here -->
+  </main>
+
+  <section class="about" style="display: none;">
+    <div class="about-content">
+      <h2>About</h2>
+      <p>We believe in delivering fresh, flavorful, and heartwarming meals made with the finest ingredients...</p>
+      <p>Founded in 2020, we aim to bring joy to your taste buds...</p>
+    </div>
+  </section>
+
+  <section class="contact-us" style="display: none;">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong> contact@ourmenu.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="./Facebook_Logo.png" alt="Facebook" width="40" /></a>
+      <a href="https://instagram.com"><img src="./Instagram_icon.png1.png" alt="Instagram" width="40" /></a>
+    </div>
+    <p>&copy; 2025 Foodie's Delight. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
