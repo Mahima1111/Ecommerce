@@ -41,6 +41,7 @@
 
     <div class="size-selector">
       <p><strong>Size:</strong></p>
+      <button>S</button>
       <button>M</button>
       <button>L</button>
       <button>XL</button>
@@ -58,15 +59,16 @@
       </ul>
     </div>
 
-    <div class="delivery-check">
-      <label>Enter delivery pincode:</label>
-      <input type="text" placeholder="e.g. 560001" />
-      <button>Check</button>
-    </div>
+  <div class="delivery-check">
+  <label>Enter delivery pincode:</label>
+  <input type="text" id="pincodeInput" placeholder="e.g. 560001" />
+  <button onclick="checkPincode()">Check</button>
+  <p id="pincodeResult"></p>
+</div>
 
     <div class="action-buttons">
    <a href="ecocart.html"><button class="cart-btn">🛒 Go to Cart</button> </a>   
-      <button class="buy-btn">⚡ Buy Now</button>
+   <a href="ecorder2.html"><button class="buy-btn">⚡ Buy Now</button> </a>
     </div>
   </div>
 </div>
@@ -75,6 +77,20 @@
   function changeImage(elem) {
     document.getElementById("main-image").src = elem.src;
   }
+
+  function checkPincode() {
+  const pin = document.getElementById("pincodeInput").value.trim();
+  const result = document.getElementById("pincodeResult");
+
+  // Check if pin is 6-digit and numeric
+  if (/^[1-9][0-9]{5}$/.test(pin)) {
+    result.textContent = "✅ Delivery available for this pincode.";
+    result.style.color = "green";
+  } else {
+    result.textContent = "❌ Invalid pincode. Please enter a valid 6-digit code.";
+    result.style.color = "red";
+  }
+}
 </script>
   <script src="js/ecom.js"></script>
 </body>

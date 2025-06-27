@@ -39,10 +39,13 @@
   </div>
 
 
-  <div class="search-container">
-    <input type="text" placeholder="Search products..." onkeyup="searchproducts()" />
-    <button class="search-icon"><i class="fas fa-search"></i></button>
-  </div>
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchproducts()" />
+  <button class="search-icon" onclick="searchproducts()">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
 </header>
 
   <section class="hero-slider">
@@ -73,42 +76,42 @@
 
   <section class="products">
     <a href="ecoproduct.html" class="product-link">
-    <div class="product-card">
+    <div class="product-card product">
       <img src="./mensss.png" alt="Men Fashion">
-      <h3>Men’s Fashion</h3>
+      <h3>TOPLOT Shirt</h3>
       <p>Trendy outfits for all seasons.</p>
       <span class="price">65% off on all</span>
     </div>
 
    
     <a href="ecoproduct.html" class="product-link">
-    <div class="product-card">
+    <div class="product-card product">
       <img src="./girldress.jpg" alt="Women Fashion">
-      <h3>Women’s Fashion</h3>
+      <h3>Trijal Fab Top</h3>
       <p>Chic and elegant styles.</p>
       <span class="price">50% offer</span>
     </div>
 
    <a href="ecoproduct.html?product=baby-fashion" class="product-link">
-    <div class="product-card">
+    <div class="product-card product">
       <img src="./kidsssss.avif" alt="Baby Fashion">
-      <h3>Baby Fashion</h3>
+      <h3>Kids Wear</h3>
       <p>Cute & cozy clothing for babies.</p>
       <span class="price">80% offer sale</span>
     </div>
 
     <a href="ecoproduct.html?product=mens-fashion" class="product-link">
-      <div class="product-card">
+      <div class="product-card product">
       <img src="./mensss.png" alt="Men Fashion">
-      <h3>Men’s Fashion</h3>
+      <h3>Lymio Shirt</h3>
       <p>Trendy outfits for all seasons.</p>
       <span class="price">75% offer sale</span>
     </div>
 
     <a href="ecoproduct.html" class="product-link">
-    <div class="product-card">
+    <div class="product-card product">
       <img src="./girldress.jpg" alt="Women Fashion">
-      <h3>Women’s Fashion</h3>
+      <h3>Fashion Top</h3>
       <p>Chic and elegant styles.</p>
       <span class="price">60% off on all brands</span>
     </div>
@@ -118,7 +121,22 @@
     </div>
 
   </section>
-  
+  <script>
+  function searchproducts() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const products = document.querySelectorAll(".product"); 
+
+  products.forEach(product => {
+    const name = product.textContent.toLowerCase();
+    if (name.includes(input)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+</script>
   <footer>
     <p>© 2025 MyShop. All rights reserved.</p>
   </footer>

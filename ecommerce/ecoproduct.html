@@ -31,9 +31,23 @@
 <!-- </nav> -->
   </header>
 
+   <header class="main-header">
+  <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchproducts()" />
+  <button class="search-icon" onclick="searchproducts()">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</header>
 <section class="products">
     
-  <div class="product-card">
+  <div class="product-card product">
     <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
     <a href="ecview1.html"> 
     <img src="./blackshirtmen.jpg"/>
@@ -46,10 +60,8 @@
       <button onclick="addToCart('TOPLOT Shirt', 599, this)">Add to Cart</button>
       <div id="toast" class="toast">Added to Cart</div>
     </div>
-    
-
-     
-    <div class="product-card">
+ 
+    <div class="product-card product">
     <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
     <a href="ecoview.html" class="product-link"> 
     <img src="./modernss.jpg"/>
@@ -62,10 +74,8 @@
       <button onclick="addToCart('Trijal Fab Top', 399, this)">Add to Cart</button>
       <div id="toast" class="toast">Added to Cart</div>
     </div>
-   
-   
     
-    <div class="product-card">
+    <div class="product-card product">
     <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
      <a href="ecview2.html" class="product-link">  
     <img src="./babygirlssssss.webp"/>
@@ -81,7 +91,7 @@
   
     
     
-    <div class="product-card">
+    <div class="product-card product">
     <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
      <a href="ecview3.html" class="product-link"> 
     <img src="./mnswear.webp"/>
@@ -97,7 +107,7 @@
    
 
     
-    <div class="product-card">
+    <div class="product-card product">
     <div class="wishlist-icon" onclick="addToWishlist(this)">♡</div>
     <a href="ecview4.html" class="product-link"> 
     <img src="./frockwear.jpg"/>
@@ -113,6 +123,23 @@
  
 
 </section>
+
+  <script>
+  function searchproducts() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const products = document.querySelectorAll(".product");
+
+  products.forEach(product => {
+    const name = product.textContent.toLowerCase();
+    if (name.includes(input)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+</script>
   <script src="ecom.js"></script>
 </body>
 </html>

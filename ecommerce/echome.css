@@ -292,11 +292,11 @@ footer {
   transition: transform 0.2s ease;
 }
 
-.product-card:hover {
+.product-card :hover {
   transform: scale(1.02);
 }
 
-.product-card img {
+.product-card  img {
   width: 100%;
   border-radius: 10px;
 }
@@ -742,4 +742,145 @@ h2 {
 .buy-btn {
   background-color: #fb641b;
   color: white;
+}
+
+.order-container {
+  max-width: 850px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  background-color: #2874f0;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-box {
+  display: flex;
+  gap: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.delivery-date {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.pricing {
+  margin-top: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 10px;
+}
+
+.discounted-price {
+  font-size: 1.3rem;
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.offer-percent {
+  color: green;
+  margin-left: 10px;
+}
+
+.coupon {
+  color: green;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.coins {
+  margin-top: 5px;
+  color: #444;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.quantity button {
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  margin-left: 15px;
+  background: none;
+  color: #d32f2f;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.email-section {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.email-section input {
+  margin-left: 10px;
+  padding: 5px;
+  width: 250px;
+}
+
+.continue-wrapper {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.continue-btn {
+  background: #ff5722;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delivery-check {
+  margin-top: 20px;
+}
+
+.delivery-check input {
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.delivery-check button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#pincodeResult {
+  margin-top: 10px;
+  font-weight: bold;
 }
